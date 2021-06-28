@@ -1,37 +1,25 @@
-﻿using CoreMVC.Models;
+﻿using CoreMVC.Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CoreMVC.Controllers
 {
 	public class HomeController : Controller
 	{
-		private readonly ILogger<HomeController> _logger;
+		private readonly DataManager dataManager;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(DataManager inDataManager)
 		{
-			_logger = logger;
+			dataManager = inDataManager;
 		}
 
 		public IActionResult Index()
 		{
-			return View();
+			return View(dataManager.TextFields.GetTextFieldByCodeWord("PageIndex"));
 		}
 
-		public IActionResult Privacy()
+		public IActionResult Contacts()
 		{
-			return View();
-		}
-
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult Error()
-		{
-			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+			return View(dataManager.TextFields.GetTextFieldByCodeWord("PageContacts"));
 		}
 	}
 }

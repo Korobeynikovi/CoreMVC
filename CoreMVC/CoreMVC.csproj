@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
+    <UserSecretsId>ea7a51e0-872d-42be-8d42-f5354efd5b1f</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Models\ViewComponents\" />
+    <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\sass\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
@@ -31,6 +31,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="5.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
 </Project>

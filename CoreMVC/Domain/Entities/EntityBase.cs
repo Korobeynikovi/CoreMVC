@@ -8,7 +8,7 @@ namespace CoreMVC.Domain.Entities
 {
 	public abstract class EntityBase
 	{
-		protected EntityBase() => DateAdded = DateTime.UtcNow;
+		//protected EntityBase() => DateAdded = DateTime.UtcNow;
 
 		[Required]
 		public Guid Id { get; set; }
@@ -34,7 +34,7 @@ namespace CoreMVC.Domain.Entities
 		[Display(Name = "SEO метатег Keywords")]
 		public virtual string MetaKeywords { get; set; }
 	
-		[DataType(DataType.Time)]
-		public DateTime DateAdded { get; set; }
+		//[DataType(DataType.Time)]
+		//public DateTime DateAdded { get; set; }
 	}
 }
