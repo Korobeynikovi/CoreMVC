@@ -14,6 +14,7 @@ namespace CoreMVC
 		public static void Main(string[] args)
 		{
 			CreateHostBuilder(args).Build().Run();
+			//I love you, Nastya
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
